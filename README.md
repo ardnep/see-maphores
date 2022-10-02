@@ -6,6 +6,7 @@
 
 **Description:** a realtime webcam that detects and analyses an object, generates descriptions of the surrounding objects, reads the generated outputs and speaks out them in the language users prefer.
 
+[**Presentation**](https://www.canva.com/design/DAFN3qE_YCA/AtB4HnQAZZA6ra00lWDlmg/view?utm_content=DAFN3qE_YCA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
 ## Inspiration
 Technologies and AIs have always been marketed as the magical cure for all, bringing convenience and efficiency to all aspects of our daily lives. As magical as it might sound, this only applies to the mainstream users, leaving behind the visually impaired, the elderlies, the mentally disabled, etc. How might we make technologies more accessible and inclusive to them? How might we use technologies to target their specific needs? How might we include them in our race toward the Smart Nation and minimize any marginalizing effects created by the current mainstream technologies?
