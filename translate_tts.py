@@ -26,16 +26,19 @@ def read_position(name, x_coord, y_coord, lang):
     if y_coord > 0.5:
         y_pos = "bottom"
 
-    sentence = "There is a " + name + " on the " + y_pos + " " + x_pos
-    tts(sentence, lang)
+    sentence = "There is a " + (name if 'None' not in name else 'Person') + " on the " + y_pos + " " + x_pos
+    tts(sentence, 0, lang)
 
 
-def tts(contents, lang):
+def tts(contents, p, lang='en'):
+    if not contents:
+        return None
+    
     if lang == "en":
         en = gTTS(text=contents, lang="en", slow=False)
-        en.save("en.mp3")
-        playsound.playsound("en.mp3")
-        os.remove("en.mp3")
+        en.save(f"en{p}.mp3")
+        playsound.playsound(f"en{p}.mp3")
+        os.remove(f"en{p}.mp3")
     elif lang == "ch":
         results_chinese = translator.translate(contents, dest="zh-cn")
         ch = gTTS(text=results_chinese.text, lang="zh-CN", slow=False)
@@ -85,5 +88,5 @@ def main(lang):
 
 if __name__ == "__main__":
     lang = input("Enter the language (en, ch, m, t): ")
-    main(lang)
+    main(lang=lang)
 

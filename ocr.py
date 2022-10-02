@@ -1,18 +1,17 @@
-from PIL import Image
 import pytesseract
 import sys
+from PIL import Image
+
+from translate_tts import tts
 
 
 def getText(image):
     pytesseract.pytesseract.tesseract_cmd = r"/opt/homebrew/bin/tesseract"
     image = Image.open(image)
     text = pytesseract.image_to_string(image, lang="eng")
-    print(text)
+    tts(text, 1)
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        img_path = sys.argv[1]
-    else:
-        img_path = "sample.jpg"
-    getText(img_path)
+    while True:
+        getText('yolov5/img.jpg')
