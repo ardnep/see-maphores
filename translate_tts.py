@@ -2,6 +2,7 @@ from googletrans import Translator
 from gtts import gTTS
 import os
 import playsound
+import time
 
 translator = Translator()
 
@@ -9,7 +10,7 @@ translator = Translator()
 
 
 # for objects
-def read_position(name_,x_coord,y_coord):
+def read_position(name,x_coord,y_coord):
     x_pos=""
     y_pos=""
     if x_coord<0.5:
@@ -28,6 +29,7 @@ def read_position(name_,x_coord,y_coord):
     
     sentence= "There is a " + name + " on the " + y_pos + " " + x_pos
     tts(sentence)
+    time.sleep(5)
     
 
 
