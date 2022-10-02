@@ -3,7 +3,7 @@
 **Team**: semaphores 
 
 **Solution:** see-maphores
-s
+
 **Description:** a realtime webcam that detects and analyses an object, generates descriptions of the surrounding objects, reads the generated outputs and speaks out them in the language users prefer.
 
 
