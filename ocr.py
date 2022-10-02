@@ -1,11 +1,10 @@
-# Import modules
 from PIL import Image
 import pytesseract
 import sys
 
 
 def getText(image):
-    pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
+    pytesseract.pytesseract.tesseract_cmd = r"/opt/homebrew/bin/tesseract"
     image = Image.open(image)
     text = pytesseract.image_to_string(image, lang="eng")
     print(text)

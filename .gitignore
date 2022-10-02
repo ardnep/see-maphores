@@ -1,2 +1,4 @@
 .DS_Stoe
 __pycache__
+*.mp3
+*.png
